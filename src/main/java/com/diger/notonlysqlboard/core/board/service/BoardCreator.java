@@ -26,13 +26,13 @@ public class BoardCreator {
             MultipartFile[] multipartFiles,
             User writer
     ) {
-        writer.getAuthority().isUserCanWrite();
+        // writer.getAuthority().isUserCanWrite();
         boardRepository.save(
                 Board.builder()
                         .title(new Title(title))
                         .textContent(new TextContent(content))
-                        .staticContent(new StaticContent(Arrays.asList(s3Uploader.execute(multipartFiles))))
-                        .writer(String.valueOf(writer.getId()))
+                        //.staticContent(new StaticContent(Arrays.asList(s3Uploader.execute(multipartFiles))))
+                        .writer("String.valueOf(writer.getId())")
                         .build()
         );
     }

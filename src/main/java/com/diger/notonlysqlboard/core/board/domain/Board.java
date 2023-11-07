@@ -14,6 +14,6 @@ public class Board extends BaseDocument {
 
     private Title title;
     private TextContent textContent;
-    private StaticContent staticContent;
+    // private StaticContent staticContent;
     private String writer;
 }
