@@ -1,4 +1,4 @@
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://diger:eg0eZjHpnI15kpB0@diger-cluster.ho2nb0a.mongodb.net/basement?retryWrites=true&w=majority
+      uri: mongodb+srv://diger:egf0eZjHpnI15kpB0@diger_cluster.ho2nb0a.mongodb.net/basement?retryWrites=true&w=majority

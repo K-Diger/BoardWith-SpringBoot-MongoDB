@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-@Document(collection = "StaticContent")
+@Document(collection = "staticContent")
 public class StaticContent {
     private final List<String> links = new ArrayList<>();
 

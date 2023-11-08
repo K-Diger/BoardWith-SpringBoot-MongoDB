@@ -3,7 +3,6 @@ package com.diger.notonlysqlboard.core.board.domain;
 import com.diger.notonlysqlboard.core.BaseDocument;
 import com.diger.notonlysqlboard.core.user.domain.User;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import org.springframework.data.mongodb.core.mapping.Document;
 

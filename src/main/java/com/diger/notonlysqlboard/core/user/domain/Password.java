@@ -1,8 +1,10 @@
 package com.diger.notonlysqlboard.core.user.domain;
 
 import lombok.Getter;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Getter
+@Document("passowrd")
 public class Password {
 
     private final String password;

@@ -4,7 +4,7 @@ import com.diger.notonlysqlboard.core.board.domain.Board;
 import com.diger.notonlysqlboard.core.board.domain.StaticContent;
 import com.diger.notonlysqlboard.core.board.domain.TextContent;
 import com.diger.notonlysqlboard.core.board.domain.Title;
-import com.diger.notonlysqlboard.core.board.repository.TestRepository;
+import com.diger.notonlysqlboard.core.board.repository.BoardRepository;
 import com.diger.notonlysqlboard.core.user.domain.User;
 import com.diger.notonlysqlboard.util.aws.s3.S3Uploader;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,7 @@ import java.util.Arrays;
 @RequiredArgsConstructor
 public class BoardCreator {
 
-    private final TestRepository testRepository;
+    private final BoardRepository boardRepository;
     private final S3Uploader s3Uploader;
 
     public void execute(
@@ -28,7 +28,7 @@ public class BoardCreator {
             User writer
     ) {
         writer.getAuthority().isUserCanWrite();
-        testRepository.save(
+        boardRepository.save(
                 new Board(
                         new Title(title),
                         new TextContent(content),
