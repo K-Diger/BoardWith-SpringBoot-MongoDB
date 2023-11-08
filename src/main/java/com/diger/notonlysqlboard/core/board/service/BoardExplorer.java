@@ -1,7 +1,7 @@
 package com.diger.notonlysqlboard.core.board.service;
 
 import com.diger.notonlysqlboard.core.board.domain.Board;
-import com.diger.notonlysqlboard.core.board.repository.BoardRepository;
+import com.diger.notonlysqlboard.core.board.repository.TestRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -18,17 +18,18 @@ import java.util.List;
 public class BoardExplorer {
 
     private final MongoTemplate mongoTemplate;
-    private final BoardRepository boardRepository;
+    private final TestRepository testRepository;
 
     public List<Board> execute(Integer page, Integer size) {
         if (isNeedPaging(page, size)) {
-            return findAllByPage(page, size);
+            return findAllByNative();
+            //return findAllByPage(page, size);
         }
         return findAllByNative();
     }
 
     private List<Board> findAllByNative() {
-        return boardRepository.findAll();
+        return testRepository.findAll();
     }
 
     private List<Board> findAllByPage(Integer page, Integer size) {

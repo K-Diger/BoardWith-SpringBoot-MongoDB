@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://diger:eg0eZjHpnI15kpB0@diger-cluster.ho2nb0a.mongodb.net/basement?retryWrites=true&w=majority

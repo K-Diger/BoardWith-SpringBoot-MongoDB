@@ -3,24 +3,15 @@ package com.diger.notonlysqlboard.core.board.domain;
 import com.diger.notonlysqlboard.core.BaseDocument;
 import com.diger.notonlysqlboard.core.user.domain.User;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.util.List;
+import org.springframework.web.multipart.MultipartFile;
 
 @Getter
 @AllArgsConstructor
-@Document("board")
-public class Board extends BaseDocument {
-
-    private final Title title;
-
-    private final TextContent textContent;
-
-    private final StaticContent staticContent;
-
+@Document(collection = "Comment")
+public class Comment extends BaseDocument {
+    private final String value;
+    private final MultipartFile file;
     private final User writer;
-
-    private final List<Comment> comments;
 }
