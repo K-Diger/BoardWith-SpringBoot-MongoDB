@@ -21,5 +21,5 @@ public class Board extends BaseDocument {
 
     private final User writer;
 
-    private final List<Comment> comments;
+    private final List<Comment> comments; // List<>()로 할수도있음
 }

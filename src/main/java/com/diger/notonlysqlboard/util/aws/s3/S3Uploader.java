@@ -10,4 +10,8 @@ public class S3Uploader {
     public String[] execute(MultipartFile[] multipartFiles) {
         return new String[]{"https://k-diger.github.io", "https://github.com/k-diger"};
     }
+
+    public String[] execute(MultipartFile multipartFiles) {
+        return new String[]{"https://k-diger.github.io", "https://github.com/k-diger"};
+    }
 }

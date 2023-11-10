@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 @AllArgsConstructor
 @Document(collection = "comment")
 public class Comment extends BaseDocument {
-    private final String value;
-    private final MultipartFile fileLink;
+    private final String text;
+    private final MultipartFile file;
     private final User writer;
 }

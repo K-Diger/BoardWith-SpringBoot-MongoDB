@@ -22,8 +22,7 @@ public class BoardExplorer {
 
     public List<Board> execute(Integer page, Integer size) {
         if (isNeedPaging(page, size)) {
-            return findAllByNative();
-            //return findAllByPage(page, size);
+            return findAllByPage(page, size);
         }
         return findAllByNative();
     }

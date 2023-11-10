@@ -11,4 +11,11 @@ public class BoardRequestDto {
         String textContent;
         MultipartFile[] staticContents;
     }
+
+    @Getter
+    public static class BoardModifyForm {
+        String title;
+        String textContent;
+        MultipartFile[] staticContents;
+    }
 }

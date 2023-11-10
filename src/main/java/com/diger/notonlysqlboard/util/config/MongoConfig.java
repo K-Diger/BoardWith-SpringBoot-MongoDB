@@ -14,13 +14,4 @@ public class MongoConfig {
     public MongoTransactionManager specifyTransactionManager(MongoDatabaseFactory mongoDatabaseFactory) {
         return new MongoTransactionManager(mongoDatabaseFactory);
     }
-
-    @Bean
-    public MongoTemplate mongoTemplate() {
-        return new MongoTemplate(
-                new SimpleMongoClientDatabaseFactory(
-                        "mongodb+srv://diger:eg0eZjHpnI15kpB0@diger-cluster.ho2nb0a.mongodb.net/basement?retryWrites=true&w=majority"
-                )
-        );
-    }
 }
